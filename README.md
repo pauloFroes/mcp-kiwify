@@ -33,7 +33,7 @@ claude mcp add --transport stdio \
   --env KIWIFY_CLIENT_ID=your-client-id \
   --env KIWIFY_CLIENT_SECRET=your-client-secret \
   --env KIWIFY_ACCOUNT_ID=your-account-id \
-  kiwify -- npx -y @paulofroes/mcp-kiwify
+  kiwify -- npx -y github:pauloFroes/mcp-kiwify
 ```
 
 ### Codex
