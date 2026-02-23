@@ -1,0 +1,41 @@
+{
+  "name": "@paulofroes/mcp-kiwify",
+  "version": "1.0.0",
+  "description": "MCP server that wraps the Kiwify public API as semantic tools for LLM agents",
+  "type": "module",
+  "bin": {
+    "mcp-kiwify": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "kiwify",
+    "claude",
+    "ai",
+    "llm"
+  ],
+  "author": "Paulo Froes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulofroes/mcp-kiwify.git"
+  },
+  "homepage": "https://github.com/paulofroes/mcp-kiwify#readme",
+  "bugs": {
+    "url": "https://github.com/paulofroes/mcp-kiwify/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
