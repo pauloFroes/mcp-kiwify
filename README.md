@@ -29,11 +29,12 @@ After creating the key, copy the three credentials shown in the modal:
 ### Claude Code
 
 ```bash
-claude mcp add --transport stdio \
-  --env KIWIFY_CLIENT_ID=your-client-id \
-  --env KIWIFY_CLIENT_SECRET=your-client-secret \
-  --env KIWIFY_ACCOUNT_ID=your-account-id \
-  kiwify -- npx -y github:pauloFroes/mcp-kiwify
+claude mcp add kiwify \
+  --transport stdio \
+  -e KIWIFY_CLIENT_ID=your-client-id \
+  -e KIWIFY_CLIENT_SECRET=your-client-secret \
+  -e KIWIFY_ACCOUNT_ID=your-account-id \
+  -- npx -y github:pauloFroes/mcp-kiwify
 ```
 
 ### Codex
