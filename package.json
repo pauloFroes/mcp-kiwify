@@ -4,7 +4,7 @@
   "description": "MCP server that wraps the Kiwify public API as semantic tools for LLM agents",
   "type": "module",
   "bin": {
-    "mcp-kiwify": "./build/index.js"
+    "mcp-kiwify": "build/index.js"
   },
   "files": [
     "build"
