@@ -42,7 +42,7 @@ export function registerSalesTools(server: McpServer) {
           .boolean()
           .optional()
           .describe("Include payment breakdown, tracking UTM, card info, and commissions"),
-        page_size: z.string().optional().describe("Number of items per page"),
+        page_size: z.string().optional().default("100").describe("Number of items per page (max 100)"),
         page_number: z.string().optional().describe("Page number (1-indexed)"),
       },
       annotations: {

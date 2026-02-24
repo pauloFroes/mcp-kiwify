@@ -12,7 +12,7 @@ export function registerEventTools(server: McpServer) {
       inputSchema: {
         product_id: z.string().uuid().describe("Event/product UUID"),
         checked_in: z.boolean().optional().describe("Filter by check-in status"),
-        page_size: z.string().optional().describe("Number of items per page"),
+        page_size: z.string().optional().default("100").describe("Number of items per page (max 100)"),
         page_number: z.string().optional().describe("Page number (1-indexed)"),
         created_at_start_date: z.string().optional().describe("Filter by creation start date (ISO 8601)"),
         created_at_end_date: z.string().optional().describe("Filter by creation end date (ISO 8601)"),

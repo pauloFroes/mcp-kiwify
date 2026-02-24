@@ -19,7 +19,7 @@ export function registerWebhookTools(server) {
         inputSchema: {
             product_id: z.string().uuid().optional().describe("Filter by product UUID"),
             search: z.string().optional().describe("Search by webhook name"),
-            page_size: z.string().optional().describe("Number of items per page"),
+            page_size: z.string().optional().default("100").describe("Number of items per page (max 100)"),
             page_number: z.string().optional().describe("Page number (1-indexed)"),
         },
         annotations: {
