@@ -5,7 +5,7 @@ export function registerProductTools(server) {
         title: "List Products",
         description: "List all products in the Kiwify account. Returns product name, type, status, price, and payment type. Use this to browse available products or find a product ID.",
         inputSchema: {
-            page_size: z.string().optional().default("100").describe("Number of items per page (max 100)"),
+            page_size: z.string().optional().default("1000").describe("Number of items per page (no known API limit)"),
             page_number: z.string().optional().describe("Page number (1-indexed)"),
         },
         annotations: {
