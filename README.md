@@ -28,14 +28,23 @@ After creating the key, copy the three credentials shown in the modal:
 
 ### Claude Code
 
+Three installation scopes are available:
+
+| Scope | Flag | Config file | Use case |
+|-------|------|-------------|----------|
+| **local** | `-s local` | `.mcp.json` | This project only (default) |
+| **project** | `-s project` | `.claude/mcp.json` | Shared with team via git |
+| **user** | `-s user` | `~/.claude/mcp.json` | All your projects |
+
 ```bash
-claude mcp add kiwify \
-  --transport stdio \
+claude mcp add kiwify -s user \
   -e KIWIFY_CLIENT_ID=your-client-id \
   -e KIWIFY_CLIENT_SECRET=your-client-secret \
   -e KIWIFY_ACCOUNT_ID=your-account-id \
   -- npx -y github:pauloFroes/mcp-kiwify
 ```
+
+> Replace `-s user` with `-s local` or `-s project` as needed.
 
 ### Codex
 
