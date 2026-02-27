@@ -1,3 +1,7 @@
 node_modules/
 .DS_Store
 *.tsbuildinfo
+
+# Claude Code (dev-only)
+.claude/
+CLAUDE.md
