@@ -36,6 +36,8 @@ Three installation scopes are available:
 | **project** | `-s project` | `.claude/mcp.json` | Shared with team via git |
 | **user** | `-s user` | `~/.claude/mcp.json` | All your projects |
 
+**Quick setup (inline env vars):**
+
 ```bash
 claude mcp add kiwify -s user \
   -e KIWIFY_CLIENT_ID=your-client-id \
@@ -45,6 +47,34 @@ claude mcp add kiwify -s user \
 ```
 
 > Replace `-s user` with `-s local` or `-s project` as needed.
+
+**Persistent setup (.env file):**
+
+Add to your `.mcp.json`:
+
+```json
+{
+  "kiwify": {
+    "command": "npx",
+    "args": ["-y", "github:pauloFroes/mcp-kiwify"],
+    "env": {
+      "KIWIFY_CLIENT_ID": "${KIWIFY_CLIENT_ID}",
+      "KIWIFY_CLIENT_SECRET": "${KIWIFY_CLIENT_SECRET}",
+      "KIWIFY_ACCOUNT_ID": "${KIWIFY_ACCOUNT_ID}"
+    }
+  }
+}
+```
+
+Then define the values in your `.env` file:
+
+```
+KIWIFY_CLIENT_ID=your-client-id
+KIWIFY_CLIENT_SECRET=your-client-secret
+KIWIFY_ACCOUNT_ID=your-account-id
+```
+
+> See `.env.example` for all required variables.
 
 ### Codex
 
