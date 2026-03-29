@@ -5,3 +5,8 @@ node_modules/
 # Claude Code (dev-only)
 .claude/
 CLAUDE.md
+
+# environment variables
+.env
+.env.*
+!.env.example
